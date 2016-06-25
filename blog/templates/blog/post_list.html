@@ -3,19 +3,16 @@
     <title>Sophie's blog</title>
   </head>
   <body>
+  <div>
+    <h1><a href="">Sophie's blog</a></h1>
+  </div>
+  {% for post in posts %}
     <div>
-      <h1><a href="">Sophie's blog</a></h1>
+      <p>published: {{ post.published_date }}</p>
+      <h1><a href="">{{ post.title}}</a></h1>
+      <p>{{ post.text|linebreaksbr }}</p>
     </div>
-
-    <div>
-      <p>published: 25.06.2016, 15.26</p>
-      <h2><a href="">My first post</a></h2>
-    </div>
-
-    <div>
-      <p>published: 25.06.2016, 15.27</p>
-      <h2><a href="">My second post</a></h2>
-    </div>
+  {% endfor %}
   </body>
-  
+
 </html>
